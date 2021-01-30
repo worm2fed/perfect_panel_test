@@ -5,7 +5,7 @@
 ```sql
 SELECT u.id AS ID
      , CONCAT(u.first_name, ' ', u.last_name) AS Name
-	 , MIN(b.author) as Author
+     , MIN(b.author) as Author
      , GROUP_CONCAT(b.name SEPARATOR ', ') AS Books
 FROM users u 
 LEFT JOIN user_books ub ON ub.user_id = u.id
